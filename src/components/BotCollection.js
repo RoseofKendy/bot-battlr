@@ -1,7 +1,7 @@
 import React from 'react';
 import BotCard from './BotCard';
 
-function BotCollection({ bots, enlistBot, army }) {
+function BotCollection({ bots, onBotClick }) {
   return (
     <div className="bot-collection">
       <h2>Available Bots</h2>
@@ -10,8 +10,7 @@ function BotCollection({ bots, enlistBot, army }) {
           <BotCard 
             key={bot.id} 
             bot={bot} 
-            onClick={() => enlistBot(bot)}
-            isEnlisted={army.some(b => b.id === bot.id)}
+            onClick={() => onBotClick(bot)}
           />
         ))}
       </div>
