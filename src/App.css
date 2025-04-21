@@ -21,6 +21,8 @@
   width: 200px;
   cursor: pointer;
   transition: transform 0.2s;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .bot-card:hover {
@@ -41,6 +43,73 @@
 .catchphrase {
   font-style: italic;
   color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Add these new styles to your existing CSS */
+
+.bot-specs {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bot-details {
+  margin-bottom: 20px;
+}
+
+.bot-details img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.bot-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.bot-actions button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.sort-bar {
+  background: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.sort-options, .filter-options {
+  margin-bottom: 15px;
+}
+
+.sort-options button, .filter-options label {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.sort-options button.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.filter-options label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-options input {
+  margin-right: 5px;
 }
 
 .army-bot {
