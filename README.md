@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+Bot Battlr - React Application
+Bot Battlr Screenshot [Note: Add actual screenshot later]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Project Description
 
-## Available Scripts
+Features Implemented
 
-In the project directory, you can run:
+Installation
 
-### `npm start`
+Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+API Endpoints
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Project Structure
 
-### `npm test`
+Next Steps
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contributing
 
-### `npm run build`
+License
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Project Description
+Bot Battlr is a React web application that allows users to browse a collection of robots, view their details, and build their own robot army. The application fetches data from a local JSON server and implements core React concepts like components, props, state, and event handling.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Features Implemented
+Core Features
+✅ View all bot profiles in a grid layout
+✅ Add bots to your army by clicking on them
+✅ See enlisted bots in a separate "Your Army" section
+✅ Release bots from your army
+✅ Permanently discharge bots (deletes from both frontend and backend)
+✅ Basic styling for visual feedback (enlisted bots are highlighted)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Technical Implementations
+✔️ React functional components with Hooks
+✔️ Fetch API for data operations
+✔️ State management for bots and army
+✔️ Component composition and prop drilling
+✔️ Responsive CSS layout
 
-### `npm run eject`
+Installation
+Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+git clone [repository-url]
+cd bot-battlr
+Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+npm install
+Start the development servers (in separate terminals):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+# Terminal 1 - Backend server
+npm run server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Terminal 2 - React application
+npm start
+Usage
+The application will automatically open in your default browser at http://localhost:3000
 
-## Learn More
+Browse available bots in the main section
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Click on any bot to add it to your army
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+View your enlisted bots in the "Your Bot Army" section
 
-### Code Splitting
+Click on enlisted bots to release them
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Click the red "×" button to permanently discharge a bot
 
-### Analyzing the Bundle Size
+API Endpoints
+The application uses these endpoints from the local JSON server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+GET /bots - Retrieve all bots
 
-### Making a Progressive Web App
+DELETE /bots/:id - Delete a specific bot
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Project Structure
+src/
+├── components/
+│   ├── BotCard.js       # Individual bot display component
+│   ├── BotCollection.js # Grid of all available bots
+│   └── YourBotArmy.js   # Display of enlisted bots
+├── App.js               # Main application component
+├── App.css              # Main styles
+├── index.js             # React entry point
+db.json                  # Mock database
 
-### Advanced Configuration
+Next Steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Planned Advanced Features
+🔹 Detailed bot view (BotSpecs component)
+🔹 Sorting functionality (SortBar component)
+🔹 Filtering by bot class
+🔹 One-bot-per-class restriction
+🔹 Improved UI/UX with animations
 
-### Deployment
+Technical Improvements
+🔸 Implement React Router for navigation
+🔸 Add error boundaries
+🔸 Implement loading states
+🔸 Write unit tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Current Status: Core functionality complete. Working on advanced features.
