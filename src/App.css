@@ -1,38 +1,61 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bot-collection, .your-bot-army {
+  margin: 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bot-list, .army-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+.bot-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bot-card:hover {
+  transform: scale(1.05);
+}
+
+.bot-card.enlisted {
+  border: 2px solid green;
+  background-color: #f0fff0;
+}
+
+.bot-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.catchphrase {
+  font-style: italic;
+  color: #666;
+}
+
+.army-bot {
+  position: relative;
+}
+
+.discharge-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
